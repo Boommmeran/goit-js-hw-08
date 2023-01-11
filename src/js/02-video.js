@@ -12,4 +12,10 @@ function onTimeUpdate(event) {
 
 player.on('timeupdate', throttle(onTimeUpdate, 1000));
 
-player.setCurrentTime(localStorage.getItem(currentTime));
+if (localStorage.getItem(currentTime)) {
+  player.setCurrentTime(localStorage.getItem(currentTime));
+};
+
+
+
+
