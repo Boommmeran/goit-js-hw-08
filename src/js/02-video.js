@@ -10,13 +10,13 @@ function onTimeUpdate(event) {
   localStorage.setItem(currentTime, JSON.stringify(event.seconds));
 };
 
-console.log('Hello');
-
 player.on('timeupdate', throttle(onTimeUpdate, 1000));
 
 if (localStorage.getItem(currentTime)) {
   player.setCurrentTime(localStorage.getItem(currentTime));
 };
+
+console.log('Hello');
 
 
 
